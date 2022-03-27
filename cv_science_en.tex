@@ -1,0 +1,297 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans, table, dvipsnames]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+% modern themes
+\moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{green}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% The following set of commands added for page numbering
+
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{comment}
+\pagestyle{fancy}
+\usepackage{eurosym}
+% \usepackage{ebgaramond}
+\fancyhf{}
+\rfoot{\thepage \hspace{1pt}/\pageref{LastPage}}
+
+% adjust the page margins
+\usepackage[scale=0.875]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Sebastian}{Hutschenreuter}
+%\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+% \address{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+%\phone[mobile]{}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{}                      % optional, remove / comment the line if not wanted
+\email{hutsch@astro.ru.nl}                               % optional, remove / comment the line if not wanted
+\homepage{www.shutsch.github.io.com}                         % optional, remove / comment the line if not wanted
+%\extrainfo{Nationality: German  \textbullet\addcontentsline{file}{sec_unit}{entry}  Date of birth: 23/11/89}   
+% optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with multiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\begin{center}
+\textsc{\large Curriculum Vitae}
+\end{center}
+
+\makecvtitle
+
+
+\vspace{-1.cm}
+
+\section{Career and Education}
+\begin{itemize}
+
+
+\item[]{\cventry{since 2020}{PostDoc}{}{\newline \textit{Department for Astrophysics/IMAPP/Radboud Universiteit, Netherlands}}{}{Advisor: Prof. Dr. Marijke Haverkorn }{}} 
+\vspace{10pt}
+
+\item[]{\cventry{2017--2020}{PhD in Astrophysics}{}{\newline \textit{Max Planck Institute for Astrophysics/Ludwig Maximilians Universit\"at, Germany}}{}{Thesis topic: Magnetic Fields in our Local Universe\\Doctoral Advisor: PD Dr. Torsten En{\ss}lin }{}} 
+\vspace{10pt}
+
+\item[]{\cventry{2014--2017}{M.Sc. in Physics}{}{\newline \textit{Ludwig Maximilians Universit\"at, Germany}}{}{Thesis topic: The primordial magnetic field in our cosmic backyard\\Thesis Advisor: PD Dr. Torsten En{\ss}lin }{}{}}
+
+\vspace{10pt}
+
+\item[]{\cventry{2010--2014}{B.Sc. in Physics}{}{\newline \textit{Ludwig Maximilians Universit\"at, Germany}}{}{Thesis topic: Chemical phases of the ISM in a stratified magnetised box\\Thesis Advisor: Dr. Philipp Girichidis}{}}  % arguments 3 to 6 can be left empty
+\end{itemize}
+
+\section{Research Interests}
+\begin{itemize}
+
+\item[\textcolor{Green}{$\bullet$}]{\textbf{Magnetic field reconstructions} \,\textit{(active)} \newline \textit{Galactic magnetic fields are traced by various physical processes such as synchrotron radiation, dust polarization pr Faraday rotation. My goal is it to help in providing a three dimensional reconstruction of the Galactic magnetic field using these data sources. }}
+
+\vspace{3pt}
+
+\item[\textcolor{Green}{$\bullet$}]{\textbf{The Galactic Faraday sky:} \,\textit{(active)}  \newline \textit{The Faraday effect is an important tracer for magnetic fields and the thermal electron density in the Milky Way. I am currently working on refining our knowledge on the Galactic Faraday depth sky by including new data sets and taking advantage of correlations with other observables.}}
+
+\vspace{3pt}
+
+\item[\textcolor{Green}{$\bullet$}]{\textbf{Primordial magnetic fields:}  \newline \textit{Large parts of the observable Universe are filled with magnetic fields of diverse strength and morphology. I gave an prediction on a lower bound for the magnetic field strength in cosmic voids and for the morphology of the magnetic field in our cosmic neighborhood. }}
+\end{itemize}
+
+
+\section{Press Releases}
+
+\begin{itemize}
+
+\item[\textcolor{Green}{$\bullet$}] \textbf{Primordial magnetic fields:} \\
+\begin{itemize}
+\item[\textcolor{Black}{$\star$}]
+\href{https://www.mpa-garching.mpg.de/498249/hl201804}{\texttt{{\color{blue} The primordial magnetic field in our cosmic backyard.}}}
+(\textit{MPA Research Highlight April 2018}) 
+
+\item[\textcolor{Black}{$\star$}]
+\href{https://www.mpg.de/11991394/relics-of-the-big-bang}{\texttt{{\color{blue} Relics of the Big Bang.}}} (\textit{MPG Research Highlight April 2018})
+
+
+\item[\textcolor{Black}{$\star$}]
+\href{https://phys.org/news/2018-04-astrophysicists-magnetic-field-cosmic-neighbourhood.html}{\texttt{{\color{blue} Astrophysicists calculate the original magnetic field in our cosmic neighbourhood.}}} (\textit{phys.org})
+\end{itemize}
+\item[\textcolor{Green}{$\bullet$}] \textbf{Galactic Faraday Sky:} \\
+\begin{itemize}
+\item[\textcolor{Black}{$\star$}]
+\href{https://www.mpa-garching.mpg.de/1050627/hl202203}{\texttt{{\color{blue} Inner view of the Milky Way’s magnetic field shows spiral structure.}}} (\textit{MPA Research Highlight March 2022})
+\end{itemize}
+
+
+\end{itemize}
+
+
+\section{Technical and Professional Skills}
+\begin{itemize}
+
+\item[\textcolor{Green}{$\bullet$}] \textbf{Programming languages:} Proficient in Python. Working knowledge of \texttt{C++}. 
+
+\vspace{5pt}
+
+\item[\textcolor{Green}{$\bullet$}] \textbf{Methods:} Bayesian analysis, Variational Inference, Machine Learning, Nested Sampling
+
+\vspace{5pt}
+
+\item[\textcolor{Green}{$\bullet$}] \textbf{Data science:}  Development of robust likelihoods for contaminated datasets, Information Field Theory
+
+\vspace{5pt}
+
+\item[\textcolor{Green}{$\bullet$}] \textbf{Other tools:} version control repositories (Git, SVN), \LaTeX{}
+
+\vspace{5pt}
+
+\item[\textcolor{Green}{$\bullet$}] \textbf{Operating Systems:} Linux (Ubuntu) and Windows.
+
+\end{itemize}
+
+
+\section{List of Publications}
+\begin{itemize}
+
+\vspace{6pt}
+
+\item[\textcolor{Green}{$\bullet$}]{``The Galactic Faraday sky 2020'', \\  
+\textbf{S. Hutschenreuter}, T. En{\ss}lin ({\color{blue} \href{https://www.aanda.org/articles/aa/full_html/2020/01/aa35479-19/aa35479-19.html}{\textit{Astronomy and Astrophysics}} /  \href{https://arxiv.org/abs/1903.06735}{\texttt{{\color{blue} arXiv:1903.06735}}}} })
+
+\item[\textcolor{Green}{$\bullet$}]{``The Galactic Faraday depth sky revisited'', \\  
+\textbf{S. Hutschenreuter}, T. En{\ss}lin ({\color{blue} \href{https://www.aanda.org/articles/aa/full_html/2020/01/aa35479-19/aa35479-19.html}{\textit{Astronomy and Astrophysics}} /  \href{https://arxiv.org/abs/1903.06735}{\texttt{{\color{blue} arXiv:1903.06735}}}} })
+
+\vspace{6pt}
+
+\item[\textcolor{Green}{$\bullet$}]{``NIFTy5: Numerical Information Field Theory'', \\P. Arras; M. Baltac; T.A. Ensslin, P. Frank \textbf{S. Hutschenreuter}, J. Knollmueller, R. Leike, M. Newrzella, L. Platz, M. Reinecke, J.Stadler ({\color{blue}Published in the \textit{Astrophysics Source Code Library}})\\ \href{http://ascl.net/1903.008}{(\texttt{{\color{blue} ascl:1903.008})}}}
+
+\vspace{6pt}
+
+\item[\textcolor{Green}{$\bullet$}]{``Determining the composition of radio plasma via circular polarization: the prospects of the Cygnus A hot spots'', \\ 
+T. En{\ss}lin , \textbf{S. Hutschenreuter},  ({\color{blue} Published in \textit{Journal for Cosmology and Astroparticle Research}}) \\ Link to Publisher: \url{https://iopscience.iop.org/article/10.1088/1475-7516/2019/01/035/meta} \\
+\href{https://arxiv.org/abs/1808.07061}{(\texttt{{\color{blue} arXiv:1808.07061})}}}
+
+\vspace{6pt}
+
+\item[\textcolor{Green}{$\bullet$}]{``The primordial magnetic field in our cosmic backyard'', \\
+\textbf{S. Hutschenreuter}, S.Dorn, J. Jasche, F. Vazza, D. Paoletti, G. Lavaux, T. En{\ss}lin ({\color{blue}Published in \textit{Classical and Quantum Gravity}})\\ Link to Publisher: \url{https://iopscience.iop.org/article/10.1088/1361-6382/aacde0} \\ \href{https://arxiv.org/abs/1803.02629}{(\texttt{{\color{blue} arXiv:1803.02629})}}}
+
+\vspace{6pt}
+
+\item[\textcolor{Green}{$\bullet$}]{``NIFTy 3 - Numerical Information Field Theory - A Python framework for multicomponent signal inference on HPC clusters'', \\
+T. Steininger, J. Dixit, P. Frank, M. Greiner, \textbf{S. Hutschenreuter}, J. Knollm{\"u}ller, R. Leike, N.~Porqueres, D. Pumpe, M. Reinecke, M. Sraml, C. Varady, T. En{\ss}lin ({\color{blue}Published in \textit{Annalen der Physik}})\\ \href{https://arxiv.org/abs/1708.01073}{(\texttt{{\color{blue} arXiv:1708.01073})}}}
+
+\vspace{6pt}
+
+\item[\textcolor{Green}{$\bullet$}]{``The Galaxy in circular polarization: all-sky radio prediction, detection strategy, and the charge of the leptonic cosmic rays'', \\ T. En{\ss}lin,  \textbf{S. Hutschenreuter}, V. Vacca, N. Oppermann   ({\color{blue}Published in \textit{Physical Review D}})\\ Link to Publisher: \url{https://journals.aps.org/prd/abstract/10.1103/PhysRevD.96.043021} \\ \href{https://arxiv.org/abs/1706.08539}{(\texttt{{\color{blue} arXiv:1706.08539})}}}
+
+\end{itemize}
+
+\section{Conferences and Workshops}
+\begin{itemize}
+
+\item[\textcolor{Green}{$\bullet$}]{\textbf{2020:} IMAGINE Collaboration, Workshop, Online\\ Talk: ``The Galactic Faraday sky 2020''.}
+
+\item[\textcolor{Green}{$\bullet$}]{\textbf{2019 Lyon:} EWASS, Conference, University of Lyon \\ Talk: ``The Galactic Faraday depth sky revisited''.}
+
+\vspace{5pt}
+
+\item[\textcolor{Green}{$\bullet$}]{\textbf{2019 Nijmegen:} IMAGINE Collaboration, Workshop, Radboud University\\ Talk: ``The Galactic Faraday depth sky revisited''.}
+
+\vspace{5pt}
+
+\item[\textcolor{Green}{$\bullet$}]{\textbf{2019 Aachen:} Big Data Science in Astroparticle Research, Workshop, RWTH \\ Supervision of NIFTy Tutorial}
+
+\vspace{5pt}
+
+\item[\textcolor{Green}{$\bullet$}]{\textbf{2018 Garching:} Institute seminar, Max Planck Institute for Astrophysics\\ Talk: ``The primordial magnetic field in our cosmic backyard''.}
+
+\vspace{5pt}
+
+\item[\textcolor{Green}{$\bullet$}]{\textbf{2018 Garching:} The High Energy Universe, Conference, Excellence Cluster Universe \\ Talk: ``The primordial magnetic field in our cosmic backyard''.}
+
+\vspace{5pt}
+
+\item[\textcolor{Green}{$\bullet$}]{\textbf{2017 Mumbai:} CEBS (Centre for Exellence in Basic
+Sciences) \\ Talk: ``The primordial magnetic field in our cosmic backyard''.}
+
+\vspace{5pt}
+
+\item[\textcolor{Green}{$\bullet$}]{\textbf{2017 Pune:} Plasma Universe and its structure formation, Conference, IUCAA (The Inter-University Centre for Astronomy and Astrophysics)\\ Talk: ``The primordial magnetic field in our cosmic backyard''.}
+
+\vspace{5pt}
+
+\item[\textcolor{Green}{$\bullet$}]{\textbf{2016 Berlin:} DFG Workshop, Harnack Haus\\ Talk: ``The primordial magnetic field in our cosmic backyard''.}
+
+
+\end{itemize}
+
+\section{Teaching}
+\begin{itemize}
+\item[\textcolor{Green}{$\bullet$}] 2021/22 Supervision of a Master student
+on  \textit{Inferring The Galactic Magnetic Field with HII clouds}
+\vspace{5pt}
+
+\item[\textcolor{Green}{$\bullet$}] 2020 Supervision of two Master students on 
+\textit{Detecting Bioluminescence trough Neutrino Telescopes}
+
+\vspace{5pt}
+
+\item[\textcolor{Green}{$\bullet$}] 2019 Preparation of exercise sheets for Information Field Theory lectures.
+
+\vspace{5pt}
+
+\item[\textcolor{Green}{$\bullet$}] 2017-2018 Supervision of high school students at Max Planck Institute for Astrophysics.
+\end{itemize}
+
+
+
+%\section{References}
+
+% \begin{itemize}
+% \item{Dr. Jens Jasche (jens.jasche@fysik.su.se), Associate Professor, Stockholm University}
+
+% \vspace{6pt}
+
+% \item{Dr. Torsten En{\ss}lin (ensslin@MPA-Garching.MPG.de), Associate Professor at Ludwig-Maximilians-University, Max Planck Institute for Astrophysics}
+
+% \vspace{6pt}
+
+% \item{Dr. Guilhem Lavaux (guilhem.lavaux@iap.fr), Permanent Researcher, Institut d'Astrophysique de Paris, CNRS}
+
+%\end{itemize}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
+
+%questions:
+% premi dones
+% caha
