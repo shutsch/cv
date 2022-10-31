@@ -80,6 +80,14 @@
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
+
+\ifbool{docover}{
+
+\vspace{\baselineskip}
+\input{_cover_letter.tex}
+\clearpage
+}{}
+
 \begin{center}
 \textsc{\large Curriculum Vitae}
 \end{center}
