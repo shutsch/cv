@@ -4,57 +4,64 @@
 
 \section{Summary and Motivation}
 
-My past and current work focusses on large scale inference projects in connection to astrophysical magnetic fields, be it the three dimensional configuration of the field itself or connected observables.
-To this end, I am employing versatile inference techniques based on Information field Theory (IFT), Nested Sampling and Machine Learning.
-These techniques give me a rich toolbox to analyse astrophysical data and model , be it   \par
-In the past, I have worked on cosmology, in particular on a prediction of the three dimensional primoridal magnetic field configuration in the Local Universe.
-Furthermore, I have laid a strong focus on the Faraday effect as a tracer of the magnetizd ISM.
-In this regard, I have lead a international collaboration of over 20 scientists to derive the most up to date map of the Galactic Faraday screen and demonstrated that this map contains surprising structure tracing   \par
-Presently, I am leading the technical working group of the IMAGINE consortium to build a inference engine for the Galactic magnetic field.
-I am also continuing my research on the Faraday sky by trying to disentangle the magnetic field and plasma information hidden by the
+My past and current research work focusses on large scale inference projects in connection to astrophysical magnetic fields, with the goal to constrain the three dimensional configuration of the magnetic field itself or of observables connected to it.
+To this end, I am employing versatile inference techniques based on Variational Inference, Nested Sampling and Machine Learning.
+These methods provide me with a rich toolbox to analyse astrophysical data sets and allow me to adequately consider the particularities of different physical settings. \par
+In the past, I have worked on cosmology, in particular on a prediction of the three dimensional present day configuration of a magnetic field generated in the primordial Universe \citep{2018Hutschenreuter}.
+In parallel to this, I have laid a strong focus on the study of the magnetized ISM, primarily via Faraday rotation.
+In this regard, I have led an international collaboration of over 20 scientists to derive the most up to date map of the Galactic Faraday screen \citep{2022Hutschenreuter} and demonstrated that this map contains surprising structures tracing the Local Arm \citep{2019Hutschenreuter}. \par
+Presently, I am leading the technical working group of the IMAGINE consortium\footnote{\href{https://www.astro.ru.nl/imagine/}{https://www.astro.ru.nl/imagine/}} to build an inference engine for the Galactic magnetic field.
+This involves the connection of very heterogenous data sets with a large set of models, with the goal to provide a versatile platform to study the Galactic magnetic field in all its aspects.
+I am also continuing my research on the Faraday sky by trying to disentangle the magnetic field and plasma configurations which prduce the effect, via the use of additional tracers of the Galactic plasma such as pulsars and different emission processes.
 \par
-My future research is driven by my interest in Galactic cartography, both from a methodologcal and a physical point of view.
-In the former case, it is clear that the vast range of scale necessary of
-In thA common theme in all my studies of the ISM is the close interconnection of all tracers.
-It is amost impossible to study a single component of the ISM without either making strongly simplifiyng assumptions or ,
-Thus makes it clear that the ultimate goal in Galactic cartography must be a holistic picture that connects all tracers and Galactic components.
-For me personally this means, I have
-I hope that the
+My future research goals are driven by my interest in Galactic cartography, both from a methodological and a physical point of view.
+A common theme that has appeared in almost all of my doctoral and postdoctoral studies is the close interconnection of all tracers and components of the ISM.
+It seems to be almost impossible to study a single aspect of the ISM without making strongly simplifying assumptions on its connection to the rest of the Milky Way.
+In my opinion, this implies that the ultimate goal in Galactic cartography must be a holistic picture that connects all tracers and Galactic components into a single framework and must involve the development of methods and models which can deal with the extreme complexity of such an endeavour.
+For this reason, I am aiming to to broaden my research portfolio with my next positions(s).
+In particular I would like to study the neutral phases of the ISM which have shown surprising connections to the Galactic magnetic field \citep{2014Clark}.
+I am furthermore interested the dynamical aspects of the ISM such as star formation and stellar feedback, which ultimately provide the causal explanation for many observed phenomena in the ISM.\par
+In the following, I give a more detailed overview over my past and present research focus.
+
 
 \section{The Galactic Faraday sky}
 
-The Faraday effect (i.e. the wavelength dependent rotation of linearly polarized light in a magnetized plasma) entangles information on the line-of-sight (LoS) component of the magnetic field with the thermal plasma density.
-In can be probed at radio frequencies for both the diffuse ISM and
-In the latter case, a
-
 \begin{center}
-  \includegraphics[width=0.7\textwidth]{RM_mean.png}
-  \captionof{Figure}{\label{fig:faraday} \small\textit{The Faraday effect as induced by the Miky Way. This map was inferred form about 55000 extraglactic polarized point sources, mostly activ galactic nuclei.}}
+  \includegraphics[width=0.65\textwidth]{RM_mean.png}
+  \captionof{Figure}{\label{fig:faraday} \small\textit{The Faraday effect as induced by the Miky Way. This map was inferred from over 50000 extragalactic polarized point sources, mostly active galactic nuclei.}}
 \end{center}
+
+
+The Faraday effect (i.e. the wavelength dependent rotation of the polarization plane of linearly polarized light in a magnetized plasma) entangles information on the line-of-sight (LoS) component of the magnetic field with the thermal plasma density.
+It can be measured at radio frequencies for a wide range of astrophyiscal settings such as the diffuse ISM, as well as for point sources such as pulsars and extragalactic objects.
+While the former two do not probe the full Galaxy due to depolarization effects and the location of pulsars within the volume of the Milky Way, I have used a catalogue of extragalactic rotation measures to produce a detailed reconstruction of the full Faraday screen of the Milky Way \citep{2022Hutschenreuter} (see Fig. \ref{fig:faraday}).
+In a preceeding study \citep{2019Hutschenreuter}, I have shown that the Galactic Farday sky contains information on structures close to Earth, in particular the Local arm using a phenomenological model that utilizes results from the \textit{Planck} survey.
+In a collaborative project with researchers at the University of Toronto, we have shown that the rotation measures provided by Fast Radio Bursts provide a useful addition for the inference of the Galactic magnetic field \citep{2022Pandhi}.
+In ongoing research, I am attempting to quantify full sky maps for the both magnetic field strength and the thermal plasma which have generated the observed Faraday effect.
 
 
 \section{Inferring the Galactic magnetic field}
 
-The Galactic magnetic field is traced by a plethora of effects, such as synchrotron radiation, the Faraday effect, dust polarisation in the optical and infrared, Zeeman splitting and more.
-Surprisingly, albeit the existence of so many available observables probing a diverse range of Galactic environements, our knowledge on both the origin and the configuration of the Galactic magnetic field is still rather poor compared to other ISM components such as e.g. dust.
-This is partly a result of the lack
-This has motivated the formation IMAGINE consortium which aims at providing both a forum and
-Within the consortium, I am responsible for the techical development of the IMAGINE software package, i.e. a inference engine that will connect all possible tracers and models with the aim
-I also am currently supervising a Master student suing the IMAGINE software to
+The Galactic magnetic field is not only traced by the Faraday effect, but also via synchrotron radiation, high energy cosmic rays, dust polarisation in the optical and infrared, Zeeman splitting and more \citep{2013Beck}.
+Surprisingly, despite the existence of so many available observables probing a diverse range of Galactic environments, our knowledge on both the origin and the three dimensional configuration of the Galactic magnetic field is still rather poor in comparison to other ISM components such as e.g. dust.
+This is mostly a result of the entanglement with other density fields such as the thermal or relativisic electron fields or, again, dust, which all come with their own model requirements and biases.
+These circumstances have motivated the formation of the IMAGINE consortium \citep{2018Boulanger} which aims at providing both a forum and a joint toolbox to tackle the inference of the Galactic magnetic field from a holistic point of view.
+Within the consortium, I am responsible for the technical development of the IMAGINE software package, i.e. a inference engine that will make it possible to connect all possible tracers and models.
+In a first pilot project, I am currently supervising a Master student using the shadow of HII clouds to constrain Gaalctic magnetic field models.
 
 \section{Primordial magnetic fields}
 
-In the beginning of my PhD, I have worked on a prediction of todays configuration of the primordial magnetic field induced by the Harrison effect, a battery effect that appears due to small perturations in the primordial plasma.
-In that work, we have used the
-While the resulting magnetic fields are to small to be observed by
-
 \begin{center}
-  \includegraphics[width=0.6\textwidth]{Primordial.png}
-  \captionof{Figure}{\label{fig:primordial} \small\textit{The LoS averaged primordial magnetic field in Galactic coordinates, as induced by the Harrison effect.}}
+  \includegraphics[width=0.50\textwidth]{Primordial.png}
+  \captionof{Figure}{\label{fig:primordial} \small\textit{The LoS averaged primordial magnetic field in Galactic coordinates, as induced by the Harrison effect. The color scale encodes the average magnetic field strength, while the filamentary patterns indicate the averaged direction of the magnetic field perpendicular to the LoS.}}
 \end{center}
 
-\section{Miscellanous}
-I furthermore contributed the to research on circular polarization of radio emission as a tracer of both the Galacitc ISM and  \par
-Apart from my research on the Faraday sky and the Galactic magnetic field, I have contibuted to research in Oceanology, where I suoervised two Master students on bioluminescence in the Deep Sea.
-We hhave reconstructed the location and movement of luminescent animals such as e.g. Plankton  \par
-I also contributed to the technical development of the Nifty package,
+In the beginning of my PhD, I have worked on a prediction of todays configuration of the primordial magnetic field induced by the Harrison effect, a battery effect that appears due to small perturbations in the primordial plasma.
+In that work, we have used the density fluctuations in today's Universe, translated them back into the radiation dominated epoch (at redshift $z=1e6$), calculated the magnetic field and propagated it back to $z=0$.
+While the resulting magnetic field strengths are to small to be observed in a realistic setting, the very conservative assumptions of this work imply that we have derived a robust lower limit on the magnetic field strength in the Local Universe.
+
+\section{Miscellaneous}
+I furthermore contributed to research on circular polarization of radio emission as an informative tracer of both the Galactic ISM \citep{2017Ensslin} and the radio hotspot Cygnus A \citep{2019Ensslin}.  \par
+Apart from my research on the Faraday sky and the Galactic magnetic field, I have worked on research in oceanology, where I supervised two Master students on bioluminescence in the Deep Sea.
+In this project, we have reconstructed the location and movement of luminescent animals such as e.g. plankton or fish from the photon coount data of the ANTARES neutrino telescope situated at the bottom of the Mediterranean Sea \citep{2021Reeb}. \par
+I also contributed to the technical development of the Nifty Python package, \citep{2017Steininger_update, 2019NIFTY}, which provides the statistical framework in which many of the aforementioned results have been derived in.

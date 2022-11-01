@@ -22,23 +22,29 @@
 
 \usepackage[english]{babel}
 \usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[numbers]{natbib}
+\usepackage{caption}
+\usepackage{float}
 \usepackage{lastpage}
 \usepackage{comment}
+\usepackage{subcaption}  % use for side-by-side figures
 \pagestyle{fancy}
 \usepackage{eurosym}
 \usepackage{etoolbox}
+\usepackage{import}
+\usepackage{aas_macros}
 % \usepackage{ebgaramond}
 \fancyhf{}
 \rfoot{\thepage \hspace{1pt}/\pageref{LastPage}}
+\newfloat{Figure}{htbp}{aux}
 
 % adjust the page margins
 \usepackage[scale=0.875]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
-\usepackage{import}
 
-%possible modes: cv_only, pub_only, cv_and_pub
 
 
 \newbool{dopub}
@@ -48,6 +54,7 @@
 \newbool{docover}
 
 \boolfalse{docover}
+
 
 
 % personal data
@@ -85,6 +92,11 @@
 
 \vspace{\baselineskip}
 \input{_cover_letter.tex}
+\renewcommand{\bibfont}{\tiny}
+% srenewcommand{\setcitestyle}{numbers}
+\renewcommand{\bibpreamble}{\small \textit{A full list of my publications is additionally provided at the end of the application.}}
+\bibliographystyle{unsrtnat}
+\bibliography{lib}
 \clearpage
 }{}
 
@@ -102,7 +114,7 @@
 \begin{itemize}
 
 
-\item[]{\cventry{since 2020}{PostDoc}{}{\newline \textit{Department for Astrophysics/IMAPP/Radboud Universiteit, Netherlands}}{}{Advisor: Prof. Dr. Marijke Haverkorn }{}}
+\item[]{\cventry{since 2020}{Postdoctoral Researcher}{}{\newline \textit{Department for Astrophysics/IMAPP/Radboud Universiteit, Netherlands}}{}{Advisor: Prof. Dr. Marijke Haverkorn }{}}
 \vspace{10pt}
 
 \item[]{\cventry{2017--2020}{PhD in Astrophysics}{}{\newline \textit{Max Planck Institute for Astrophysics/Ludwig Maximilians Universit\"at, Germany}}{}{Thesis topic: Magnetic Fields in our Local Universe\\Doctoral Advisor: PD Dr. Torsten En{\ss}lin }{}}
@@ -119,7 +131,7 @@
 \section{Research Interests}
 \begin{itemize}
 
-\item[\textcolor{Green}{$\bullet$}]{\textbf{Magnetic field reconstructions} \,\textit{(active)} \newline \textit{Galactic magnetic fields are traced by various physical processes such as synchrotron radiation, dust polarization pr Faraday rotation. My goal is it to help in providing a three dimensional reconstruction of the Galactic magnetic field using these data sources. }}
+\item[\textcolor{Green}{$\bullet$}]{\textbf{Magnetic field reconstructions} \,\textit{(active)} \newline \textit{Galactic magnetic fields are traced by various physical processes such as synchrotron radiation, dust polarization or Faraday rotation. My goal is to help to provide a three dimensional reconstruction of the Galactic magnetic field using these data sources. }}
 
 \vspace{3pt}
 
@@ -166,10 +178,10 @@
 \vspace{\baselineskip}
 \section{Participation in Collaborations and Organisations}
 \begin{itemize}
-\item[\textcolor{Green}{$\bullet$}] \textbf{IAU: }Scientific member \href{https://www.iau.org/administration/membership/individual/19962/}{\texttt{\color{blue} (Link)}}
+\item[\textcolor{Green}{$\bullet$}] \textbf{IAU: }Junior member \href{https://www.iau.org/administration/membership/individual/19962/}{\texttt{\color{blue} (Link)}}
 \item[\textcolor{Green}{$\bullet$}] \textbf{LOFAR Magnetism Key Science Project (MKSP): } Scientific member \href{https://lofar-mksp.org/people/}{\texttt{\color{blue} (Link)}}
 \item[\textcolor{Green}{$\bullet$}] \textbf{Polarisation Sky Survey of the Universe's Magnetism (POSSUM): } Scientific member \href{https://possum-survey.org/members/}{\texttt{\color{blue} (Link)}}
-\item[\textcolor{Green}{$\bullet$}] \textbf{IMAGINE consortium: } Leader of software development \href{https://www.astro.ru.nl/imagine/index.html}{\texttt{\color{blue} (Link)}}
+\item[\textcolor{Green}{$\bullet$}] \textbf{IMAGINE consortium: } Leader of the technical working group \href{https://www.astro.ru.nl/imagine/imagineprojects.html}{\texttt{\color{blue} (Link)}}
 \end{itemize}
 
 
@@ -198,15 +210,6 @@
 \end{itemize}
 
 
-\ifbool{dopub}{
-
-\vspace{\baselineskip}
-\section{List of selected Publications}
-
-\input{_publication_list.tex}
-
-}{}
-
 \vspace{\baselineskip}
 \section{Conferences and Workshops}
 \begin{itemize}
@@ -225,6 +228,8 @@
     \item[\textcolor{Black}{$\star$}]{\textbf{2021 (Online):} Royal Astronomical Society Specialist Discussion Meeting\\ Talk: ``The Galactic Faraday sky'' (\href{https://www.youtube.com/watch?v=1HM33vWJbUM}{Youtube})}
 
     \item[\textcolor{Black}{$\star$}]{\textbf{2021 (Online):} MKSP Milky Way working group, Meeting\\ Talk: ``The Galactic Faraday sky 2020''.}
+
+    \item[\textcolor{Black}{$\star$}]{\textbf{2021 (Online):} Pan-Experiment Galactic Science Group\\ Talk: ``The Galactic Faraday sky 2020''.}
 
     \item[\textcolor{Black}{$\star$}]{\textbf{2020 (Online):} IMAGINE Collaboration, Workshop\\ Talk: ``The Galactic Faraday sky 2020''.}
 
@@ -265,6 +270,14 @@ on  \textit{Inferring The Galactic Magnetic Field with HII clouds}
 \item[\textcolor{Green}{$\bullet$}] 2017-2018 Supervision of high school students at Max Planck Institute for Astrophysics.
 \end{itemize}
 
+\ifbool{dopub}{
+
+\vspace{\baselineskip}
+\section{Publication list}
+
+\input{_publication_list.tex}
+
+}{}
 
 
 % \section{References}
